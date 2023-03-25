@@ -20,7 +20,19 @@ function App() {
       })
       .catch((error) => {
         alert('alert')
-      
+
+      })
+  }
+  // {i am passing this put function as a prop}
+  const addLike = (id) => {
+    axios
+      .put(`/gallery/like/${id}`)
+      .then(response => {
+        getPhotos()
+      })
+      .catch(error => {
+        alert('error')
+        console.log('error', error)
       })
   }
 
@@ -31,7 +43,8 @@ function App() {
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
       <p>Gallery goes here</p>
-      <GalleryList list={galleryList} />
+      {/* like={addLike} is passing the function as a prop */}
+      <GalleryList list={galleryList}  like={addLike}/>
     </div>
   );
 }
