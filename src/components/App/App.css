@@ -18,7 +18,16 @@
   flex-wrap: wrap;
   border: solid 1px transparent;
   justify-content: space-between;
-  gap: 5px
+  gap: 5px;
 }
 
+.ptag {
+  cursor: pointer;
+  border: solid 1px black;
+  width: 125px;
+  height: 125px;
+}
 
+.image {
+  cursor: pointer;
+}

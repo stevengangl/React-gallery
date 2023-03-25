@@ -17,8 +17,8 @@ function GalleryItem({ list, like }) {
 
                 {
                     toggleSwitch ?
-                        <img src={list.path} width='125px' height='125px' onClick={() => toggleImage()} /> :
-                        <p onClick={() => toggleImage()}  >{list.description}   </p>
+                        <img class='image' src={list.path} width='125px' height='125px' onClick={() => toggleImage()} /> :
+                        <p class='ptag' onClick={() => toggleImage()}  >{list.description}   </p>
                 }
 
                 <p>{list.title}</p>
