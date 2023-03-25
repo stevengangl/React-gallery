@@ -13,11 +13,12 @@
   font-size: 1.5em;
 }
 
-.groupOne {
+.gallery {
   display: flex;
+  flex-wrap: wrap;
   border: solid 1px transparent;
-  justify-content: center;
-  gap: 15px
+  justify-content: space-between;
+  gap: 5px
 }
 
 

@@ -1,35 +1,26 @@
 import React from "react";
+import GalleryItem from "../GalleryItem/GalleryItem";
 
 function GalleryList({ list }) {
     console.log('inside GL comp', list)
 
     return (
         <>
-            <div className="groupOne">
-                {list.map((pic) => (
-
-                    <img src={pic.path} />
-
-                ))}
-            </div>
+            {list.map((list) => (
 
 
+                <GalleryItem list={list} />
 
+
+            ))
+            }
 
         </>
-
     )
 }
 
 export default GalleryList;
 
 
-{/* <div id='pic1'>
-<img src="images/goat_small.jpg" alt="goat" />
-</div>
-<div id='pic2'>
-<img src="images/aussy_Small.jpeg" alt="goat" />
-</div>
-<div id='pic3'>
-<img src="images/psilocybin_Small.jpeg" alt="goat" />
-</div> */}
+
+
