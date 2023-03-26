@@ -1,9 +1,8 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Project Likes
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+This is an application that is kinda like instagram. There are pictures displayed that a person can like and it will count the amount of times the picture is liked. There is also a delete button which will delete the picture and its data from the database.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
