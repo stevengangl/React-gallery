@@ -5,11 +5,11 @@ import GalleryItem from "../GalleryItem/GalleryItem";
 //with the like prop
 //see app.jsx for where it starts its journey
 function GalleryList({ list, like }) {
-    console.log('inside GL comp', list, like)
+    // console.log('inside GL comp')
 
     return (
         <>
-        <div class='gallery' >
+        <div className='gallery' >
             {list.map((list) => (
 
                 <GalleryItem list={list} like={like} />

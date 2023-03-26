@@ -16,7 +16,7 @@ function App() {
       .get('/gallery')
       .then((response) => {
         setGalleryList(response.data)
-        console.log('in get looking at photos:', galleryList)
+        // console.log('in get looking at photos:', galleryList)
       })
       .catch((error) => {
         alert('alert')

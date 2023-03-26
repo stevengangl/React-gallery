@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function GalleryItem({ list, like }) {
-    console.log('inside gallery item()', list, like)
+    // console.log('inside gallery item()')
 
     const [toggleSwitch, setToggleSwitch] = useState(true)
 
@@ -17,8 +17,8 @@ function GalleryItem({ list, like }) {
 
                 {
                     toggleSwitch ?
-                        <img class='image' src={list.path} width='125px' height='125px' onClick={() => toggleImage()} /> :
-                        <p class='ptag' onClick={() => toggleImage()}  >{list.description}   </p>
+                        <img className='image' src={list.path} width='125px' height='125px' onClick={() => toggleImage()} /> :
+                        <p className='ptag' onClick={() => toggleImage()}  >{list.description}   </p>
                 }
 
                 <p>{list.title}</p>
