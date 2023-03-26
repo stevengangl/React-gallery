@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function GalleryItem({ list, like }) {
+function GalleryItem({ list, like, deleteMe }) {
     // console.log('inside gallery item()')
 
     const [toggleSwitch, setToggleSwitch] = useState(true)
@@ -23,6 +23,7 @@ function GalleryItem({ list, like }) {
 
                 <p>{list.title}</p>
                 <button onClick={() => like(list.id)}>love it!</button>
+                <button onClick={() => deleteMe(list.id)}>Delete</button>
                 <p>{list.likes} people love this</p>
             </div>
 

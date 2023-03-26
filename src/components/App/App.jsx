@@ -36,6 +36,18 @@ function App() {
       })
   }
 
+  const deleteItem = (id) => {
+    axios
+      .delete(`/gallery/delete/${id}`)
+      .then((response) => {
+        console.log(response)
+        getPhotos();
+      })
+      .catch((error) => {
+        console.log('error')
+      });
+  }
+
 
   return (
     <div className="App">
@@ -44,7 +56,7 @@ function App() {
       </header>
       <p>Gallery goes here</p>
       {/* like={addLike} is passing the function as a prop */}
-      <GalleryList list={galleryList}  like={addLike}/>
+      <GalleryList list={galleryList} like={addLike} deleteMe={deleteItem}/>
     </div>
   );
 }

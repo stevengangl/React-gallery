@@ -1,3 +1,4 @@
+const { default: Axios } = require('axios');
 const express = require('express');
 const router = express.Router();
 // const galleryItems = require('../modules/gallery.data');
@@ -5,7 +6,26 @@ const pool = require('../modules/pool.js')
 
 // DO NOT MODIFY THIS FILE FOR BASE MODE
 
-// PUT Route
+
+
+// DELETE ROUTE
+
+router.delete("/delete/:id", (req, res) => {
+    let idToDelete = req.params.id;
+    const sqlText = `DELETE FROM "gallery" WHERE id=$1;`;
+  
+    pool
+      .query(sqlText, [idToDelete])
+      .then((result) => {
+        console.log("inside delete route:", idToDelete);
+        res.sendStatus(200);
+      })
+      .catch((error) => {
+        console.log(error);
+        res.sendStatus(500);
+      });
+  });
+
 // PUT Route
 router.put('/like/:id', (req, res) => {
     const galleryId = req.params.id;
