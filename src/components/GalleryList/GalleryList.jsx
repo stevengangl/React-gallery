@@ -11,8 +11,8 @@ function GalleryList({ list, like, deleteMe }) {
         <>
         <div className='gallery' >
             {list.map((list) => (
-
-                <GalleryItem list={list} like={like} deleteMe={deleteMe} />
+                            // had to add key for the component to be able to tell them apart
+                <GalleryItem  key={list.id} list={list} like={like} deleteMe={deleteMe} />
             ))
             }
             </div>

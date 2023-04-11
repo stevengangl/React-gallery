@@ -5,7 +5,7 @@ import GalleryList from "../GalleryList/GalleryList";
 
 function App() {
 
-  let [galleryList, setGalleryList] = useState([]);
+  const [galleryList, setGalleryList] = useState([]);
 
   useEffect(() => {
     getPhotos();
